@@ -603,3 +603,31 @@ b { font-weight: 700; }
 @keyframes fadeOutUp { to { opacity: 0; transform: translate(-50%, -8px); } }
 .swap { animation: rise .35s both; }
 .jn-extra { animation: rise .35s .1s both; }
+
+/* ---------- URL analogy diagram ---------- */
+.ua { display: flex; flex-direction: column; gap: 0; flex-shrink: 0; }
+.ua-url { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.ua-url span { text-align: center; font-family: 'SF Mono', Menlo, Consolas, monospace; font-weight: 700; font-size: 24px; padding: 8px 6px; border: 2px solid; border-radius: 12px; background: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; animation: rise .45s both; }
+.ua-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.ua-card { position: relative; display: flex; align-items: center; gap: 14px; background: var(--grey); border: 1px solid var(--grey-2); border-top: 4px solid var(--c); border-radius: 14px; padding: 12px 16px; margin-top: 22px; animation: rise .5s both; animation-delay: calc(var(--i) * .15s + .15s); }
+.ua-arrow { position: absolute; top: -24px; left: 50%; width: 2px; height: 18px; background: var(--c); transform: translateX(-50%); }
+.ua-arrow::after { content: ''; position: absolute; bottom: -6px; left: -5px; border: 6px solid transparent; border-top: 7px solid var(--c); border-bottom: 0; }
+.ua-svg { width: 132px; height: 80px; flex-shrink: 0; }
+.ua-text { display: flex; flex-direction: column; gap: 4px; }
+.ua-text b { font-size: 22px; color: var(--c); line-height: 1.15; }
+.ua-text span { font-size: 17px; color: var(--muted); line-height: 1.3; }
+.ua-car { animation: drive 3.2s ease-in-out infinite; }
+@keyframes drive { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(62px); } }
+.ua-note { animation: note-bob 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes note-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+/* compact URL legend */
+.url-legend { display: flex; flex-wrap: wrap; gap: 10px; flex: none; }
+.legend-item { flex-direction: row; align-items: center; gap: 10px; padding: 9px 16px; border: 2px solid; border-left-width: 2px; border-radius: 999px; background: #fff; box-shadow: none; font-size: 17px; }
+.legend-item b { font-size: 18px; }
+.legend-item code { font-size: 15px; }
+.lg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.url-split { padding: 22px 28px; font-size: 40px; }
+.ua-card { flex-direction: column; align-items: stretch; gap: 8px; padding: 14px 18px 16px; }
+.ua-svg { width: 100%; height: 118px; }
+.ua-text { text-align: center; }
+.ua-text b { font-size: 24px; }

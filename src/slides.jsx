@@ -12,6 +12,7 @@ import UrlDissector from './components/UrlDissector.jsx'
 import DnsLookup from './components/DnsLookup.jsx'
 import HttpExchange from './components/HttpExchange.jsx'
 import LayersDemo from './components/LayersDemo.jsx'
+import UrlAnalogy from './components/UrlAnalogy.jsx'
 import GuidedStep, { STEPS, FINAL_DOC } from './components/GuidedStep.jsx'
 import { LiveQR, Showcase } from './components/Interactive.jsx'
 import { NetworkBg, TypingBar, CountUp, OneSecondBar, DeviceRows, SpotTheReal, FlipCards } from './components/Visuals.jsx'
@@ -219,13 +220,8 @@ export function buildSlides() {
       notes: 'A URL is like a full postal address. Try the preset links, then ask a student for a link they use (a YouTube video, a Google search). Point out the query after “?”. (13–15 min)',
       render: () => (
         <div className="slide">
-          <Head title="Anatomy of a URL" sub="A URL is the full address of a page, like a postal address. Paste any link to split it into parts." pill="Part 1" />
-          <div className="address-analogy">
-            <span className="aa"><Route size={16} /> <b>https://</b> how to travel</span>
-            <span className="aa"><Home size={16} /> <b>domain</b> which building</span>
-            <span className="aa"><DoorOpen size={16} /> <b>/path</b> which room</span>
-            <span className="aa"><StickyNote size={16} /> <b>?query</b> a note for the desk</span>
-          </div>
+          <Head title="Anatomy of a URL" sub="A URL is the full address of a page — just like a postal address. Then paste any link to split it." pill="Part 1" />
+          <UrlAnalogy />
           <UrlDissector />
         </div>
       ),

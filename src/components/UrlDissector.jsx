@@ -77,11 +77,11 @@ export default function UrlDissector() {
           </div>
           <div className="url-legend">
             {parts.map((p, i) => (
-              <div key={i} className={`card legend-item ${hover === p.k ? 'hl' : ''}`} style={{ borderLeftColor: COLORS[p.k] }}
+              <div key={i} title={EXPLAIN[p.k][1]} className={`legend-item ${hover === p.k ? 'hl' : ''}`} style={{ borderColor: COLORS[p.k] }}
                 onMouseEnter={() => setHover(p.k)} onMouseLeave={() => setHover(null)}>
+                <span className="lg-dot" style={{ background: COLORS[p.k] }} />
                 <b style={{ color: COLORS[p.k] }}>{EXPLAIN[p.k][0]}</b>
                 <code>{p.v}</code>
-                <span>{EXPLAIN[p.k][1]}</span>
               </div>
             ))}
           </div>
