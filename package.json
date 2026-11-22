@@ -1,0 +1,22 @@
+{
+  "name": "how-the-web-works",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open"
+  },
+  "dependencies": {
+    "lucide-react": "^1.77.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11",
+    "vite-plugin-singlefile": "^2.0.3"
+  }
+}
